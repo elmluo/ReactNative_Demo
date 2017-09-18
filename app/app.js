@@ -6,13 +6,14 @@ import {
 } from 'react-native';
 
 import Demo from './demo';
-
+import QQLogin from './QQLogin_demo/login';
 // 定义根组件
 class App extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Demo/>
+                {/*<Demo/>*/}
+                <QQLogin/>
             </View>
         )
     }
@@ -20,7 +21,6 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FF0000',
         flex: 1,
     }
 });

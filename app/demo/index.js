@@ -4,7 +4,8 @@ import {
     View,
     Text,
     Image,
-    ListView
+    ListView,
+    TextInput
 } from 'react-native';
 
 class Demo extends React.Component {
@@ -81,7 +82,7 @@ class Demo extends React.Component {
                         <Text style={flexbox.itemText}>3</Text>
                     </View>
                 </View>
-                <Text>图像组件</Text>
+                <Text>图像组件132</Text>
                 <View>
                     <Image
                         style={imageContainer.image}
@@ -111,6 +112,12 @@ class Demo extends React.Component {
                         // 渲染列表项
                         renderRow={this.renderMovieList}
                     />
+                </View>
+                <Text>TextInput</Text>
+                <View>
+                    <TextInput>
+                        123456
+                    </TextInput>
                 </View>
             </View>
         )
