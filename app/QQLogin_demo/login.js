@@ -4,11 +4,12 @@ import {
     View,
     Text,
     Image,
-    TextInput
+    TextInput,
+    Dimensions,
 } from 'react-native';
 
 // 获取物理设备宽度
-// let {width: dev_width} = Dimensions.get('window');
+let {width, height} = Dimensions.get('window');
 
 export default class QQLogin extends React.Component{
     render() {
@@ -77,19 +78,19 @@ let loginStyles = new StyleSheet.create({
     },
     textInput: {
         height: 38,
-        width: '100%',
+        width: width,
         // 内容居中，
         textAlign: 'center',
         backgroundColor: 'white',
-        // borderWidth: 1,
-        // borderColor: '#dede00',
-        borderRadius: 10,
-        shadowRadius: 5,
+        borderWidth: 1,
+        borderColor: '#dddddd',
+        // borderRadius: 10,
+        // shadowRadius: 5,
         shadowColor: 'blue',
     },
     toLogin: {
         height: 35,
-        width: '80%',
+        width: width*0.8,
         backgroundColor: 'blue',
         marginTop: 30,
         marginBottom: 10,
@@ -98,7 +99,7 @@ let loginStyles = new StyleSheet.create({
         alignItems: 'center',
     },
     setting: {
-        width: 250,
+        width: width*0.8,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center'

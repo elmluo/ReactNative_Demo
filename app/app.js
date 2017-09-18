@@ -2,10 +2,10 @@ import React from 'react';
 import {
     StyleSheet,
     View,
-    Text
 } from 'react-native';
 
 import Demo from './demo';
+import Touchable from './Touchable_demo/Touchable';
 import QQLogin from './QQLogin_demo/login';
 // 定义根组件
 class App extends React.Component {
@@ -13,7 +13,9 @@ class App extends React.Component {
         return (
             <View style={styles.container}>
                 {/*<Demo/>*/}
-                <QQLogin/>
+                <Touchable/>
+                {/*<QQLogin/>*/}
+
             </View>
         )
     }
