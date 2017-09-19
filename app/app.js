@@ -7,7 +7,8 @@ import {
 import Demo from './demo';
 import Touchable from './Touchable_demo/Touchable';
 import QQLogin from './QQLogin_demo/login';
-import ScrollViewDemo from './scrollView_demo/scrollView'
+import ScrollViewDemo from './ScrollView_demo/scrollView'
+import FocusPicture from './focusPicture_demo/focusPicture'
 // 定义根组件
 class App extends React.Component {
     render() {
@@ -16,8 +17,8 @@ class App extends React.Component {
                 {/*<Demo/>*/}
                 {/*<Touchable/>*/}
                 {/*<QQLogin/>*/}
-                <ScrollViewDemo/>
-
+                {/*<ScrollViewDemo/>*/}
+                <FocusPicture/>
             </View>
         )
     }

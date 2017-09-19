@@ -31,10 +31,10 @@ export default React.createClass({
                 {/*用这个标签表包裹需要改变的元素*/}
                 <TouchableOpacity
                     activeOpacity={0.5}
-                    onPress={this.handleOnPress.bind(this)}
+                    onPress={()=>this.handleOnPress()}
                 >
                     <Text style={touchableStyles.text}>
-                        点我改变透明度
+                        点我改变透明度123
                     </Text>
                 </TouchableOpacity>
 
@@ -51,7 +51,7 @@ export default React.createClass({
                 </TouchableOpacity>
 
                 <View>
-                    <Text>
+                    <Text style={touchableStyles.text}>
                         {this.state.title}
                     </Text>
                 </View>
@@ -72,10 +72,6 @@ export default React.createClass({
         this.setState({
             title: event
         });
-
-        // 拿到组件
-        console.log(this.refs.topView);
-        this.refs.topView.dom
     }
 })
 
@@ -86,6 +82,7 @@ let touchableStyles = new StyleSheet.create({
         alignItems: 'center',
     },
     text: {
+        marginTop: 20,
         borderWidth: 1,
         borderColor: 'yellow',
         padding: 5,
