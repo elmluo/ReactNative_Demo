@@ -9,6 +9,8 @@ import Touchable from './Touchable_demo/Touchable';
 import QQLogin from './QQLogin_demo/login';
 import ScrollViewDemo from './ScrollView_demo/scrollView'
 import FocusPicture from './focusPicture_demo/focusPicture'
+
+import ListViewDemo from './ListView_demo/ListView'
 // 定义根组件
 class App extends React.Component {
     render() {
@@ -18,7 +20,8 @@ class App extends React.Component {
                 {/*<Touchable/>*/}
                 {/*<QQLogin/>*/}
                 {/*<ScrollViewDemo/>*/}
-                <FocusPicture/>
+                {/*<FocusPicture/>*/}
+                <ListViewDemo/>
             </View>
         )
     }

@@ -22,12 +22,12 @@ class Demo extends React.Component {
 
 
         // 列表组件中判断数据是否有变化，如果数据有变化，就触发更新
-        let listDataSource = new ListView.DataSource({
+        let ds = new ListView.DataSource({
             rowHasChanged: (row1, row2) => row1 !== row2
         });
 
         this.state = {
-            movies: listDataSource.cloneWithRows(movies)
+            movies: ds.cloneWithRows(movies)
         };
 
 
