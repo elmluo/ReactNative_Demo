@@ -11,12 +11,14 @@ import {
     Text,
     View
 } from 'react-native';
-import App from './app/app'
+// import App from './app/app'
+import XMGmain from './DNewsDemoAPP/XMGMain'
 export default class reactnative_demo extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <App/>
+                {/*<App/>*/}
+                <XMGmain/>
             </View>
         );
     }

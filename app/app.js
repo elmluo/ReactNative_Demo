@@ -27,8 +27,8 @@ class App extends React.Component {
                 {/*<FocusPicture/>*/}
                 {/*<ListViewDemo/>*/}
                 {/*<ListView9GridDemo/>*/}
-                {/*<TabBarDemo/>*/}
-                <NavigatorIOSDemo/>
+                <TabBarDemo/>
+                {/*<NavigatorIOSDemo/>*/}
             </View>
         )
     }
