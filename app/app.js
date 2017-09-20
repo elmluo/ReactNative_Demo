@@ -13,8 +13,7 @@ import FocusPicture from './focusPicture_demo/focusPicture'
 import ListViewDemo from './ListView_demo/ListView'
 import ListView9GridDemo from './ListView_demo/ListView_9grid'
 import TabBarDemo from './TabBarIOS_demo/TabBarIOS_demo'
-
-import icons from './Assets/icons'
+import NavigatorIOSDemo from './navigatorIOS/navigatorIOS'
 
 // 定义根组件
 class App extends React.Component {
@@ -28,7 +27,8 @@ class App extends React.Component {
                 {/*<FocusPicture/>*/}
                 {/*<ListViewDemo/>*/}
                 {/*<ListView9GridDemo/>*/}
-                <TabBarDemo/>
+                {/*<TabBarDemo/>*/}
+                <NavigatorIOSDemo/>
             </View>
         )
     }

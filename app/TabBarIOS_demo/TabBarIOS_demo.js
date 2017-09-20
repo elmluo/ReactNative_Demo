@@ -44,7 +44,7 @@ var TabBarExample = React.createClass({
             >
 
                 <TabBarIOS.Item
-                    title="蓝色首页"  // 名称ß
+                    title="蓝色首页"  // 名称
                     icon={{uri: icons.bird, scale: 4.6}}  // 自定义的base64的icon小图标，scale为缩小倍率，越大图标越小
                     badge={'泡泡'}    // 图标右上角的小气泡
                     selected={this.state.selectedTab === '蓝色页面'} // 决定显示的子页面
