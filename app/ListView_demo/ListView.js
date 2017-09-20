@@ -3,7 +3,9 @@ import {
     StyleSheet,
     View,
     Text,
-    ListView
+    ListView,
+    Alert,
+    TouchableOpacity,
 } from 'react-native';
 
 export default class ViewList extends React.Component {
@@ -11,21 +13,22 @@ export default class ViewList extends React.Component {
         super(props);
 
         let movies = [
-            {title: '这个杀手不太冷'},
-            {title: '肖生克的救赎'},
-            {title: '阿甘正传'},
-            {title: '霸王别姬00'},
-            {title: '霸王别姬01'},
-            {title: '霸王别姬02'},
-            {title: '霸王别姬03'},
-            {title: '霸王别姬04'},
-            {title: '霸王别姬05'},
-            {title: '霸王别姬06'},
-            {title: '霸王别姬07'},
-            {title: '霸王别姬08'},
-            {title: '霸王别姬09'},
-            {title: '霸王别姬10'},
-            {title: '美丽人生'}
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
+            {title: '阿甘正传', text: '￥40'},
         ];
 
 
@@ -43,15 +46,24 @@ export default class ViewList extends React.Component {
 
     }
 
-    renderList(item) {
+    renderList(rowData, sectionID, rowID, hightlightRow) {
+        console.log(rowData, sectionID, rowID);
         return (
-            <View style={viewListStyles.item}>
-                <View>
+            <TouchableOpacity activeOpacity={0.5}
+                                onPress={()=>{Alert.alert('点击了第'+ rowID +'行')}}>
+                <View style={viewListStyles.item}>
+                    <View style={viewListStyles.itemImg}>
+                    </View>
+                    <View style={viewListStyles.itemContent}>
+                        <View style={viewListStyles.title}>
+                            <Text>{rowData.title}</Text>
+                        </View>
+                        <View style={viewListStyles.text}>
+                            <Text>{rowData.text}</Text>
+                        </View>
+                    </View>
                 </View>
-                <View>
-                    <Text>{item.title}</Text>
-                </View>
-            </View>
+            </TouchableOpacity>
         )
     }
 
@@ -65,6 +77,7 @@ export default class ViewList extends React.Component {
                     initailListSize
                     // 渲染列表
                     renderRow={this.renderList}
+                    showsVerticalScrollIndicator={false}
                 >
                 </ListView>
             </View>
@@ -75,15 +88,36 @@ export default class ViewList extends React.Component {
 let viewListStyles = new StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 30,
+        marginTop: 22,
         height: 300
     },
     item: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         backgroundColor: 'yellow',
         borderWidth: 1,
         borderColor: "blue",
         height: 50
     },
-    itemTitle: {},
-    itemContent: {}
+    itemImg:{
+        width: 50,
+        backgroundColor: 'red',
+    },
+    itemContent: {
+        flex:1,
+        justifyContent: 'center',
+        backgroundColor: 'blue'
+    },
+    title: {
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'yellow'
+    },
+    text: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        backgroundColor: 'pink'
+    }
 });

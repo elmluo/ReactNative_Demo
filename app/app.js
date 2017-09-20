@@ -10,7 +10,9 @@ import QQLogin from './QQLogin_demo/login';
 import ScrollViewDemo from './ScrollView_demo/scrollView'
 import FocusPicture from './focusPicture_demo/focusPicture'
 
-import ListViewDemo from './ListView_demo/ListView'
+// import ListViewDemo from './ListView_demo/ListView'
+import ListView9GridDemo from './ListView_demo/ListView_9grid'
+
 // 定义根组件
 class App extends React.Component {
     render() {
@@ -21,7 +23,8 @@ class App extends React.Component {
                 {/*<QQLogin/>*/}
                 {/*<ScrollViewDemo/>*/}
                 {/*<FocusPicture/>*/}
-                <ListViewDemo/>
+                {/*<ListViewDemo/>*/}
+                <ListView9GridDemo/>
             </View>
         )
     }
