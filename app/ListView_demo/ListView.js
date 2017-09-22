@@ -43,7 +43,6 @@ export default class ViewList extends React.Component {
             movies: ds.cloneWithRows(movies),
         };
 
-
     }
 
     renderList(rowData, sectionID, rowID, hightlightRow) {

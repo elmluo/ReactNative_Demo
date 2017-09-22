@@ -3,14 +3,12 @@ import {
     StyleSheet,
     View,
     Text,
-    TabBarIOS,
-    NavigatorIOS,
 } from 'react-native';
 
 export default class Mine extends React.Component{
     render() {
         return(
-            <View>
+            <View style={styles.container}>
                 <Text>我是Mine</Text>
             </View>
         )
@@ -19,5 +17,8 @@ export default class Mine extends React.Component{
 
 let styles = new StyleSheet.create({
     container: {
+        flex: 1,
+        justifyContent:'center',
+        alignItems:'center'
     }
 });

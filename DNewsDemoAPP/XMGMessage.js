@@ -3,14 +3,12 @@ import {
     StyleSheet,
     View,
     Text,
-    TabBarIOS,
-    NavigatorIOS,
 } from 'react-native';
 
 export default class Message extends React.Component{
     render() {
         return(
-            <View>
+            <View style={styles.container}>
                 <Text>我是Message</Text>
             </View>
         )
@@ -19,5 +17,8 @@ export default class Message extends React.Component{
 
 let styles = new StyleSheet.create({
     container: {
+        flex: 1,
+        justifyContent:'center',
+        alignItems:'center'
     }
 });

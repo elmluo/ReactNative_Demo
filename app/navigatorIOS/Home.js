@@ -14,13 +14,13 @@ export default class Home extends React.Component{
             <View style={styles.container}>
 
                 <TouchableOpacity
-                    onPress={() => {this.props.navigator.push({     // 将路由push到父组件的导航组件中
-                        component:Temp,        // 需要跳转的页面
-                        title:'Temp页'        // 跳转到Temp页面导航栏标题
-                    })}}
-                >
-                    <Text>点击跳转</Text>
-                </TouchableOpacity>
+                onPress={() => {this.props.navigator.push({     // 将路由push到父组件的导航组件中
+                    component: Temp,        // 需要跳转的页面
+                    title:'Temp页'        // 跳转到Temp页面导航栏标题
+                })}}
+            >
+                <Text>点击跳转</Text>
+            </TouchableOpacity>
             </View>
         )
     }

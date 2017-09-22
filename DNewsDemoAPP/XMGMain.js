@@ -6,12 +6,11 @@ var ReactNative = require('react-native');
 var {
     StyleSheet,
     TabBarIOS,
-    Text,
-    View,
+    NavigatorIOS,
 } = ReactNative;
 
 import Home from './XMGHome';
-import Find from './XMGFind';
+import Discovery from './XMGFind';
 import Message from './XMGMessage';
 import Profile from './XMGMine';
 
@@ -25,8 +24,8 @@ var TabBarExample = React.createClass({
 
     getInitialState: function() {
         return {
-            selectedTab: '红色页面', // 默认选中的子页面；
-            notifCount: 0,  // 提示的数量统计
+            selectedTab: 'home', // 默认选中的子页面；
+            notifCount: 0,  // 提示的数量统计;
             presses: 0,
         };
     },
@@ -43,9 +42,9 @@ var TabBarExample = React.createClass({
 
                 <TabBarIOS.Item
                     title="首页"
-                    icon={require('./TabBar/tabbar_home@3x.png')}
-                    selectedIcon={require('./TabBar/tabbar_home_highlighted@3x.png')}
-                    badge={'泡泡'}    // 图标右上角的小气泡
+                    icon={require('./TabBar/tabbar_home.png')}  // 自动识别@2x/@3x
+                    selectedIcon={require('./TabBar/tabbar_home_highlighted.png')}
+                    // badge={'泡泡'}    // 图标右上角的小气泡
                     selected={this.state.selectedTab === 'home'}
                     onPress={() => {
                         this.setState({
@@ -53,12 +52,23 @@ var TabBarExample = React.createClass({
                         });
                     }}
                 >
-                    <Home/>
+                    <NavigatorIOS
+                        tintColor="orange"
+                        style={{flex: 1}}
+                        initialRoute={
+                            {
+                                component: Home,
+                                title: '网易',
+                                leftButtonIcon:require('./NavigationBar/navigationbar_friendattention.png'),
+                                rightButtonIcon:require('./NavigationBar/navigationbar_pop.png')
+                            }
+                        }
+                    />
                 </TabBarIOS.Item>
 
                 <TabBarIOS.Item
-                    icon={require('./TabBar/tabbar_discover@3x.png')}
-                    selectedIcon={require('./TabBar/tabbar_discover_highlighted@3x.png')}
+                    icon={require('./TabBar/tabbar_discover.png')}
+                    selectedIcon={require('./TabBar/tabbar_discover_highlighted.png')}
                     title='发现'
                     selected={this.state.selectedTab === 'discovery'}  //是否有选中的效果
                     onPress={() => {
@@ -67,12 +77,20 @@ var TabBarExample = React.createClass({
                         });
                     }}
                 >
-                    <Find/>
+                    <NavigatorIOS
+                        initialRoute={
+                            {
+                                component: Discovery,
+                                title: '发现'
+                            }
+                        }
+                        style={{flex: 1}}
+                    />
                 </TabBarIOS.Item>
 
                 <TabBarIOS.Item
-                    icon={require('./TabBar/tabbar_message_center@3x.png')}
-                    selectedIcon={require('./TabBar/tabbar_message_center_highlighted@3x.png')}
+                    icon={require('./TabBar/tabbar_message_center.png')}
+                    selectedIcon={require('./TabBar/tabbar_message_center_highlighted.png')}
                     renderAsOriginal
                     title="消息"
                     selected={this.state.selectedTab === 'message'}
@@ -82,12 +100,21 @@ var TabBarExample = React.createClass({
                         });
                     }}
                 >
-                    <Message/>
+                    <NavigatorIOS
+                        initialRoute={
+                            {
+                                component: Message,
+                                title: '消息'
+                            }
+                        }
+                        style={{flex: 1}}
+                    />
                 </TabBarIOS.Item>
 
                 <TabBarIOS.Item
-                    icon={require('./TabBar/tabbar_profile@3x.png')}
-                    selectedIcon={require('./TabBar/tabbar_profile_highlighted@3x.png')}
+                    // icon={require('tabbar_profile.png')}
+                    icon={require('./TabBar/tabbar_profile.png')}
+                    selectedIcon={require('./TabBar/tabbar_profile_highlighted.png')}
                     renderAsOriginal
                     title="More"
                     selected={this.state.selectedTab === 'profile'}
@@ -98,7 +125,15 @@ var TabBarExample = React.createClass({
                         });
                     }}
                 >
-                    <Profile/>
+                    <NavigatorIOS
+                        initialRoute={
+                            {
+                                component: Profile,
+                                title: '个人'
+                            }
+                        }
+                        style={{flex: 1}}
+                    />
                 </TabBarIOS.Item>
 
             </TabBarIOS>

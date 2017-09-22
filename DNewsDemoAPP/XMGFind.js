@@ -10,7 +10,7 @@ import {
 export default class Find extends React.Component{
     render() {
         return(
-            <View>
+            <View style={styles.container}>
                 <Text>我是Find</Text>
             </View>
         )
@@ -19,5 +19,8 @@ export default class Find extends React.Component{
 
 let styles = new StyleSheet.create({
     container: {
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center'
     }
 });
